@@ -15,14 +15,19 @@ export default vo => `
     <link id="favicon" rel="shortcut icon" href="/kyt-favicon.png" sizes="16x16 32x32" type="image/png" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    ${vo.cssBundle ? '<link rel="stylesheet" type="text/css" href="' + vo.cssBundle + '">' : ''}
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>${vo.css}</style>
 
     <title>Universal React Starter Kyt</title>
   </head>
 
   <body>
     <div id="root"><div>${vo.root}</div></div>
-    <script src="${vo.jsBundle}"></script>
+    <script>
+      window.__PRELOADED_STATE__ = ${vo.initialState}
+    </script>
+    <script>${vo.manifest}</script>
+    ${vo.entries.map(e => `<script defer src="${e}"></script>`).join('\n')}
   </body>
 
 </html>

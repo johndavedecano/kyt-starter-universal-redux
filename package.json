@@ -1,30 +1,44 @@
 {
-  "name": "wf-kyt-starter-universal",
+  "name": "kyt-starter-universal-redux",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nytm/wf-kyt-starter-universal.git"
+    "url": "git+https://github.com/julianvmodesto/kyt-starter-universal-redux.git"
   },
   "author": "",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/nytm/wf-kyt-starter-universal/issues"
+    "url": "https://github.com/julianvmodesto/kyt-starter-universal-redux/issues"
   },
-  "homepage": "https://github.com/nytm/wf-kyt-starter-universal#readme",
+  "homepage": "https://github.com/julianvmodesto/kyt-starter-universal-redux#readme",
   "kyt": {
     "version": "^0.2.0"
   },
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-plugin-transform-react-inline-elements": "^6.8.0",
     "compression": "^1.6.2",
     "enzyme": "^2.4.1",
     "express": "^4.14.0",
-    "react": "^15.3.0",
+    "isomorphic-fetch": "^2.2.1",
+    "path": "^0.12.7",
+    "postcss-cssnext": "^2.8.0",
+    "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-router": "^2.6.1"
-  }
+    "react-redux": "^4.4.5",
+    "react-router": "^2.6.1",
+    "react-router-redux": "^4.0.6",
+    "redux": "^3.6.0",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.1.1",
+    "redux-thunk": "^2.1.0",
+    "webpack-md5-hash": "0.0.5"
+  },
+  "devDependencies": {}
 }
