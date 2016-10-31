@@ -28,31 +28,6 @@ app.use(compression());
 // Setup the public directory so that we can serve static assets.
 app.use(express.static(path.join(process.cwd(), KYT.PUBLIC_DIR)));
 
-// we get these from memory via webpack in DEV mode
-let css = '';
-let manifest = '';
-if (process.env.NODE_ENV === 'production') {
-  // Inline our CSS
-  css = Object.keys(clientAssets)
-        .filter(a => !!clientAssets[a].css)
-        .map(a => fs.readFileSync(path.join(__dirname, '../public', clientAssets[a].css), 'utf8'))
-        .join('\n');
-
-
-  // Inline our manifest bundle mapping for performance reasons
-  // (since it'll always be relatively small, better to save the rounddtrip)
-  manifest = Object.keys(clientAssets)
-        .filter(a => a === 'manifest')
-        .map(a => fs.readFileSync(path.join(__dirname, '../public', clientAssets[a].js), 'utf8'))
-        .reduce(a => a);
-}
-
-// Entry bundles (we only have 2: '0_vendor' and 'main')
-const entries = Object.keys(clientAssets)
-        .sort() // order matters, need "0_vendor" bundle to go first
-        .filter(a => a === '0_vendor' || a === 'main')
-        .map(a => clientAssets[a].js);
-
 // Setup server side routing.
 app.use((request, response) => {
   const history = createMemoryHistory(request.originalUrl);
@@ -76,9 +51,7 @@ app.use((request, response) => {
             <RouterContext {...renderProps} />
           </Provider>
           ),
-        css,
-        manifest,
-        entries,
+        cssBundle: clientAssets.main.css,
         initialState,
       }));
     } else {
