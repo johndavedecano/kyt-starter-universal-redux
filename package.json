@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/julianvmodesto/kyt-starter-universal-redux#readme",
   "kyt": {
-    "version": "^0.2.0"
+    "version": "^0.3.0"
   },
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.18.0",
