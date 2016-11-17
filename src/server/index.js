@@ -9,7 +9,6 @@ import React from 'react';
 import RouterContext from 'react-router/lib/RouterContext';
 import createMemoryHistory from 'react-router/lib/createMemoryHistory';
 import match from 'react-router/lib/match';
-import fs from 'fs';
 
 import configureStore from '../redux/store';
 
@@ -52,6 +51,7 @@ app.use((request, response) => {
           </Provider>
           ),
         cssBundle: clientAssets.main.css,
+        jsBundle: clientAssets.main.js,
         initialState,
       }));
     } else {
@@ -61,4 +61,3 @@ app.use((request, response) => {
 });
 
 app.listen(parseInt(KYT.SERVER_PORT, 10));
-
