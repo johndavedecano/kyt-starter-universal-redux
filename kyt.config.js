@@ -7,8 +7,8 @@ module.exports = {
   debug: false,
   modifyWebpackConfig: (baseConfig, options) => {
     const appConfig = Object.assign({}, baseConfig);
-    const babelLoader = appConfig.module.loaders.find(loader => loader.loader === 'babel-loader');
-    babelLoader.query.plugins.push(
+    const babelLoader = appConfig.module.rules.find(loader => loader.loader === 'babel-loader');
+    babelLoader.options.plugins.push(
         'babel-plugin-transform-class-properties',
         'babel-plugin-transform-object-rest-spread');
 
