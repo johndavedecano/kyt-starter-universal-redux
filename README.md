@@ -21,6 +21,8 @@ The following are some of the tools included in this starter-kyt:
 - [Redux DevTools](https://github.com/gaearon/redux-devtools)
 - [Redux Thunk](https://github.com/gaearon/redux-thunk) and [Isomorphic Fetch](https://github.com/matthew-andrews/isomorphic-fetch)
 
+NOTE: kyt doesn't copy devDependencies, which include redux-devtools, so make sure to install these after setup
+
 ## TODO
 - Example of redux reducer, preferably with a thunk + fetch
 
