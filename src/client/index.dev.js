@@ -1,8 +1,7 @@
 
 import React from 'react';
-import browserHistory from 'react-router/lib/browserHistory';
-import Router from 'react-router/lib/Router';
 
+import { browserHistory, Router } from 'react-router';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
@@ -45,3 +44,4 @@ if (module.hot) {
     mount();
   });
 }
+
