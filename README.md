@@ -1,4 +1,4 @@
-# Universal React starter-kyt
+# Universal React-Redux starter-kyt
 
 This starter-kyt should serve as the base for an advanced, server and client-rendered React app.
 
