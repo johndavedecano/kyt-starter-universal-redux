@@ -6,7 +6,7 @@ This starter-kyt should serve as the base for an advanced, server and client-ren
 ## Installation
 
 1. Create a new directory and install [kyt](https://github.com/NYTimes/kyt)
-2. kyt-cli setup -r https://github.com/julianvmodesto/kyt-starter-universal-redux.git
+2. `kyt-cli setup -r https://github.com/julianvmodesto/kyt-starter-universal-redux.git`
 
 ## Tools
 
